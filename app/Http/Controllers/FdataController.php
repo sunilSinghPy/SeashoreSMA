@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\fdataCreateRequest;
 use App\Models\Fdata;
 use app\Models\Student;
 use Illuminate\Http\Request;
@@ -29,10 +30,11 @@ class FdataController extends Controller
     public function create(Request $request)
     {
         $student = $request->session()->get('student');
-        // dd($student);
+        if (!$student->form_filled) {
+            return view('fdatas.create')->with(['student' => $student]);
+        }
 
-
-        return view('fdatas.create')->with(['student' => $student]);
+        return view('students.getpass', ['student' => $student])->with(['msg' => 'You have Already filled the Form']);
     }
 
     /**
@@ -41,45 +43,24 @@ class FdataController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(fdataCreateRequest $request)
     {
 
-        $validatedData = request()->validate([
-            'student_id' => 'required',
-            'roll_no' => 'required',
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'post' => 'required',
-            'email' => 'required',
-            'dob' => 'required',
-            'gender' => 'required',
-            'mobile' => 'required',
-            'fathers_name' => 'required',
-            'fathers_occupation' => 'required',
-            'f_mobile' => 'required',
-            'address' => 'required',
-            'state' => 'required',
-            'distt' => 'required',
-            'pincode' => 'required',
-            'about_us' => '',
-            'what_mn' => '',
-            'why_mn' => '',
-            'rel_mn' => '',
+        $validated = $request->validated();
 
 
-        ]);
+        // $fdata = new Fdata($validated);
+        // $student = Student::where('id', $fdata->student_id)->first();
+        $student = Student::find($validated['student_id']);
 
-
-
-        $fdata = new Fdata($validatedData);
-        $student = Student::where('id', $fdata->student_id)->first();
-        $student->form_filled = 1;
-        $student->save();
-        $fdata->save();
-
-
-
-        return view('students.getpass', ['student' => $student])->with(['msg' => 'Form submited successfully']);
+        if (!$student->form_filled) {
+            $student->form_filled = 1;
+            $fdata = Fdata::create($validated);
+            $fdata->save();
+            $student->save();
+            return view('students.getpass', ['student' => $student])->with(['msg' => 'Form submited successfully']);
+        }
+        return view('students.getpass', ['student' => $student])->with(['msg' => 'You have Already filled the Form']);
     }
 
     /**

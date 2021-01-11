@@ -32,7 +32,7 @@ class Fdata extends Model
         'student_id'
     ];
 public function student(){
-    return $this->hasOne(Student::class);
+    return $this->belongsTo(Student::class);
 }
 
 

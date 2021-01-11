@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'form_fillable',
+    ];
+
+
     public function fdata(){
         return $this->hasOne(Fdata::class);
     }

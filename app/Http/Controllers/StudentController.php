@@ -16,7 +16,7 @@ class StudentController extends Controller
     {
         $students = Student::all();
         // $students = $students->toArray();
-        return view('students.index',['students'=>$students]);
+        return view('students.index', ['students' => $students]);
     }
 
     /**
@@ -84,37 +84,25 @@ class StudentController extends Controller
     {
         //
     }
-    public function varifyStudent(Request $request){
+    public function varifyStudent(Request $request)
+    {
         //ddd($request->all());
 
-       $validatedData = $request->validate([
-          'roll_no' => 'required|max:10|min:5',
-          'fname'    => 'required|max:15|min:3',
-      ]);
-           // ddd($validatedData);
-      $student = Student::where(function($query) use($validatedData)
-      {
-          $query->where('roll_no', '=', $validatedData['roll_no'])
-                ->where('name', 'like', '%'.$validatedData['fname'].'%');
+        $validatedData = $request->validate([
+            'roll_no' => 'required|max:10|min:5',
+            'fname'    => 'required|max:15|min:3',
+        ]);
+        // ddd($validatedData);
+        $student = Student::where(function ($query) use ($validatedData) {
+            $query->where('roll_no', '=', $validatedData['roll_no'])
+                ->where('name', 'like', '%' . $validatedData['fname'] . '%');
+        })
+            ->first();
 
-      })
-      ->first();
-
-      if($student){
-       //   ddd($student);
-
-       if($student->form_filled ==0){
-           $request->session()->put('student',$student);
-           return redirect()->route('fdatas.create');
-
-       }else{
-        return view('students.getpass',['student'=>$student])->with(['msg'=>'you have already filled the form']);
-       }
-
-
-      }
-      return redirect()->back()->withErrors(['msg'=>'Roll No or name not match!']);
-  }
-
-
+        if ($student) {
+            $request->session()->put('student', $student);
+            return redirect()->route('fdatas.create');
+        }
+        return redirect()->back()->withErrors(['msg' => 'invalid Roll No. or Name!']);
+    }
 }
