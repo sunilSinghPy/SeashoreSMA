@@ -15,8 +15,9 @@ class FdataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request )
     {
+
         $fdatas = Fdata::latest()->get();
         // ddd($fdatas);
         return view('fdatas.index')->with(['fdatas' => $fdatas]);
@@ -107,7 +108,15 @@ class FdataController extends Controller
      */
     public function destroy(Fdata $fdata)
     {
-        //
+        if($fdata->student->form_filled){
+            $fdata->student->form_filled = 0;
+            $fdata->student->save();
+            // dd($fdata->student->form_filled);
+           $fdata->delete();
+           session()->flash('msg','Student form deleted successfully');
+           return redirect()->back();
+       }
+       return redirect()->back()->with(['msg'=>'something went wrong!']);
     }
     public function fdatasToCsv()
     {

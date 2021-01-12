@@ -59,7 +59,9 @@ Route::get('/fdatas/{id}', [App\Http\Controllers\FdataController::class, 'show']
 Route::get('fdatas/{id}/edit', [App\Http\Controllers\FdataController::class, 'edit'])
     ->name('fdatas.edit')
     ->middleware('auth');
-
+Route::delete('fdatas/{fdata}/',[App\Http\Controllers\FdataController::class,'destroy'])
+    ->name('fdatas.destroy')
+    ->middleware('auth');
 
 
 

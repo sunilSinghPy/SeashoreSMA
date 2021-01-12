@@ -13,12 +13,12 @@
 </style>
 @endsection
 @section('content')
-{{dd($fdata->student())}}
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
-            <div class="row mb-2">
+            <div class="mb-2 row">
                 <div class="col-sm-6">
                     <h1>Form-Details</h1>
                 </div>
@@ -88,7 +88,7 @@
                       <dt class="col-sm-4">Relative In Merchent Navy :</dt>
                       <dd class="col-sm-8">{{$fdata->rel_mn}}</dd>
                       <dt class="col-sm-4">Student ID :</dt>
-                      <dd class="col-sm-8">{{$fdata->student()->name}}</dd>
+                      <dd class="col-sm-8">{{$fdata->student->name}}</dd>
                     </dl>
                   </div>
                   <!-- /.card-body -->
