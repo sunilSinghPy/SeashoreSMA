@@ -110,7 +110,7 @@ class FdataController extends Controller
     {
         if($fdata->student->form_filled){
             $fdata->student->form_filled = 0;
-            $fdata->student->save();
+-            $fdata->student->save();
             // dd($fdata->student->form_filled);
            $fdata->delete();
            session()->flash('msg','Student form deleted successfully');

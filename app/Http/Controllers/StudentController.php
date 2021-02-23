@@ -90,7 +90,7 @@ class StudentController extends Controller
 
         $validatedData = $request->validate([
             'roll_no' => 'required|max:10|min:5',
-            'fname'    => 'required|max:15|min:3',
+            'fname'    => 'required|max:15|min:2',
         ]);
         // ddd($validatedData);
         $student = Student::where(function ($query) use ($validatedData) {
