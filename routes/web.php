@@ -1,7 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers;
+use App\Http\Controllers\AformController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,3 +70,13 @@ Route::delete('fdatas/{fdata}/',[App\Http\Controllers\FdataController::class,'de
 Route::get('/admin/fdatasToCsv', [App\Http\Controllers\FdataController::class, 'fdatasToCsv'])
     ->name('fdatasToCsv')
     ->middleware('auth');
+
+/**
+ * Routes for Admission form multipart form data
+ */
+Route::get('/student/admission1/',[AformController::class,'createStep1'])->name('admission-form');
+Route::post('/student/admission1/',[AformController::class,'postStep1']);
+Route::get('/student/admission2/',[AformController::class,'createStep2']);
+Route::post('/student/admission2/',[AformController::class,'postStep2']);
+Route::get('/student/admission2/',[AformController::class,'createStep3']);
+Route::post('/student/admission2/',[AformController::class,'postStep3']);
