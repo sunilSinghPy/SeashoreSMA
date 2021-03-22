@@ -49,7 +49,7 @@
                         <div class="mb-3 col-md-6">
                             <label for="rollNo">Roll No:</label>
                             <input class="form-control" type="number" name="rollNo" id="rollNo" maxlength="10"
-                                placeholder="" value="" requried>
+                                placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Valid Roll Number is required.
                             </div>
@@ -57,7 +57,7 @@
                         <div class="mb-3 col-md-6">
                             <label for="course">The Course Of</label>
                             <input class="form-control" type="text" name="course" id="course" maxlength="32" placeholder=""
-                                value="" requried>
+                                value="" required>
                             <div class="invalid-feedback">
                                 Valid course Name required.
                             </div>
@@ -67,7 +67,7 @@
                         <div class="mb-3 col-md-12">
                             <label for="name">Applicant Name:</label>
                             <input class="form-control" type="text" name="name" id="name" maxlength="32" placeholder=""
-                                value="" requried>
+                                value="" required>
                             <div class="invalid-feedback">
                                 Valid Name is required.
                             </div>
@@ -77,7 +77,7 @@
                     <div class="row">
                         <div class="mb-3 col-md-6">
                             <label for="lastName">Date Of Birth</label>
-                            <input type="date" class="form-control" name="dOb" placeholder="" value="" requried>
+                            <input type="date" class="form-control" name="dOb" placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Valid date of birth is required.
                             </div>
@@ -86,11 +86,11 @@
                             <label for="lastName">Medically Fit <span class='text-muted'>.....</span></label>
                             <div class="custom-control custom-radio">
                                 <input name="isMedicalFit" value='Yes' type="radio" class="custom-control-input" checked
-                                    requried>
+                                    required>
                                 <label class="custom-control-label" for="isMedicalFit">Yes</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="isMedicalFit" value="No" type="radio" class="custom-control-input" requried>
+                                <input name="isMedicalFit" value="No" type="radio" class="custom-control-input" required>
                                 <label class="custom-control-label" for="isMedicalFit">No</label>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                         <div class="mb-3 col-md-6">
                             <label for="fatherName">Father's Name:</label>
                             <input class="form-control" type="text" name="fatherName" id="fatherName" maxlength="32"
-                                placeholder="" value="" requried>
+                                placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Father's name is required.
                             </div>
@@ -107,7 +107,7 @@
                         <div class="mb-3 col-md-6">
                             <label for="fatherOccupation">Father's occupation:</label>
                             <input class="form-control" type="text" name="fatherOccupation" id="fatherOccupation"
-                                maxlength="10" placeholder="" value="" requried>
+                                maxlength="10" placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Valid father's occupation is required.
                             </div>
@@ -117,7 +117,7 @@
                         <div class="mb-3 col-md-6">
                             <label for="motherName">Mother's Name:</label>
                             <input class="form-control" type="text" name="motherName" id="motherName" maxlength="10"
-                                placeholder="" value="" requried>
+                                placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Valid mother's name is required.
                             </div>
@@ -125,7 +125,7 @@
                         <div class="mb-3 col-md-6">
                             <label for="motherOccupation">Mother's occupation:</label>
                             <input class="form-control" type="text" name="motherOccupation" id="motherOccupation"
-                                maxlength="10" placeholder="" value="" requried>
+                                maxlength="10" placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Valid mother's occupation is required.
                             </div>
@@ -137,18 +137,18 @@
                             <label for="gender">Gender:<span class='text-muted'></span></label>
                             <div class="custom-control custom-radio">
                                 <input name="gender" value='Male' type="radio" class="custom-control-input" checked
-                                    requried>
+                                    required>
                                 <label class="custom-control-label" for="Male">Male</label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input name="gender" value="Female" type="radio" class="custom-control-input" requried>
+                                <input name="gender" value="Female" type="radio" class="custom-control-input" required>
                                 <label class="custom-control-label" for="Female">Female</label>
                             </div>
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com"
-                                maxlength="50" value="" requried>
+                                maxlength="50" value="" required>
                             <div class="invalid-feedback">
                                 Please enter a valid email address.
                             </div>
@@ -158,7 +158,7 @@
                         <div class="mb-3 col-md-6">
                             <label for="mobile">Mobile No.</label>
                             <input type="number" class="form-control" name="mobile" id="mobile" minlength="10"
-                                maxlength="10" placeholder="" value="" maxlength="32" placeholder="" value="" requried>
+                                maxlength="10" placeholder="" value="" maxlength="32" placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Valid mobile no. is required.
                             </div>
@@ -167,7 +167,7 @@
                             <label for="lastName">Father's mobile<span class="text-muted">(secondary
                                     contact)</span></label>
                             <input type="number" class="form-control" name="mobile1" id="mobile1" minlength="10"
-                                maxlength="10" placeholder="" value="" maxlength="32" placeholder="" value="" requried>
+                                maxlength="10" placeholder="" value="" maxlength="32" placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Valid mobile no. is required.
                             </div>
@@ -179,7 +179,7 @@
                         <div class="mb-4 col-md-4">
                             <label for="houseNo">House no.:</label>
                             <input type="text" class="form-control" name="houseNo" id="houseNo" maxlength="10"
-                                placeholder="" value="" requried>
+                                placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 city/town required.
                             </div>
@@ -187,7 +187,7 @@
                         <div class="mb-4 col-md-4">
                             <label for="landmark">Landmark:</label>
                             <input type="text" class="form-control" name="landmark" id="landmark" maxlength="32"
-                                placeholder="" value="" requried>
+                                placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 city/town required.
                             </div>
@@ -196,7 +196,7 @@
                         <div class="mb-4 col-md-4">
                             <label for="tehsil">village/tehsil:</label>
                             <input type="text" class="form-control" name="tehsil" id="tehsil" maxlength="32" placeholder=""
-                                value="" requried>
+                                value="" required>
                             <div class="invalid-feedback">
                                 pin code required.
                             </div>
@@ -207,7 +207,7 @@
                         <div class="mb-4 col-md-4">
                             <label for="distt">city/town</label>
                             <input type="text" class="form-control" name="distt" id="distt" maxlength="32" placeholder=""
-                                value="" requried>
+                                value="" required>
                             <div class="invalid-feedback">
                                 city/town required.
                             </div>
@@ -215,7 +215,7 @@
 
                         <div class="mb-4 col-md-4">
                             <label for="state">State</label>
-                            <select class="custom-select d-block w-100" name="state" id="state" requried>
+                            <select class="custom-select d-block w-100" name="state" id="state" required>
                                 <option value="">----Select State----</option>
                                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -261,7 +261,7 @@
                         <div class="mb-4 col-md-4">
                             <label for="pincode">pincode</label>
                             <input type="number" class="form-control" name="pincode" id="pincode" maxlength="32"
-                                placeholder="" value="" requried>
+                                placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 pin code required.
                             </div>
@@ -283,41 +283,41 @@
                             <tr>
                                 <td>1.</td>
                                 <td>10th</td>
-                                <td><input type="text" name="mSub" maxlength="12" placeholder="" value="" requried></td>
-                                <td><input type="text" name="mUni" maxlength="32" placeholder="" value="" requried></td>
-                                <td><input type="number" name="mYoP" maxlength="4" placeholder="" value="" requried>
+                                <td><input type="text" name="mSub" maxlength="12" placeholder="" value="" required></td>
+                                <td><input type="text" name="mUni" maxlength="32" placeholder="" value="" required></td>
+                                <td><input type="number" name="mYoP" maxlength="4" placeholder="" value="" required>
                                 </td>
-                                <td><input type="number" name="mPer" maxlength="4" placeholder="" value="" requried>
+                                <td><input type="number" name="mPer" maxlength="4" placeholder="" value="" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2.</td>
                                 <td>12th</td>
-                                <td><input type="text" name="iSub" maxlength="12" placeholder="" value="" requried></td>
-                                <td><input type="text" name="iUni" maxlength="32" placeholder="" value="" requried></td>
-                                <td><input type="number" name="iYoP" maxlength="4" placeholder="" value="" requried>
+                                <td><input type="text" name="iSub" maxlength="12" placeholder="" value="" required></td>
+                                <td><input type="text" name="iUni" maxlength="32" placeholder="" value="" required></td>
+                                <td><input type="number" name="iYoP" maxlength="4" placeholder="" value="" required>
                                 </td>
-                                <td><input type="number" name="iPer" maxlength="4" placeholder="" value="" requried>
+                                <td><input type="number" name="iPer" maxlength="4" placeholder="" value="" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>3.</td>
                                 <td>Grad</td>
-                                <td><input type="text" name="gSub" maxlength="12" placeholder="" value="" requried></td>
-                                <td><input type="text" name="gUni" maxlength="32" placeholder="" value="" requried></td>
-                                <td><input type="number" name="gYoP" maxlength="4" placeholder="" value="" requried>
+                                <td><input type="text" name="gSub" maxlength="12" placeholder="" value="" required></td>
+                                <td><input type="text" name="gUni" maxlength="32" placeholder="" value="" required></td>
+                                <td><input type="number" name="gYoP" maxlength="4" placeholder="" value="" required>
                                 </td>
-                                <td><input type="number" name="gPer" maxlength="4" placeholder="" value="" requried>
+                                <td><input type="number" name="gPer" maxlength="4" placeholder="" value="" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>4.</td>
                                 <td>Post-Grad</td>
-                                <td><input type="text" name="pSub" maxlength="12" placeholder="" value="" requried></td>
-                                <td><input type="text" name="pUni" maxlength="32" placeholder="" value="" requried></td>
-                                <td><input type="number" name="pYoP" maxlength="4" placeholder="" value="" requried>
+                                <td><input type="text" name="pSub" maxlength="12" placeholder="" value="" required></td>
+                                <td><input type="text" name="pUni" maxlength="32" placeholder="" value="" required></td>
+                                <td><input type="number" name="pYoP" maxlength="4" placeholder="" value="" required>
                                 </td>
-                                <td><input type="number" name="pPer" maxlength="4" placeholder="" value="" requried>
+                                <td><input type="number" name="pPer" maxlength="4" placeholder="" value="" required>
                                 </td>
                             </tr>
 
@@ -329,7 +329,7 @@
                         <div class="mb-3 col-md-3">
                             <label for="height">Height<span class='text-muted'></span>:</label>
                             <input type="text" class="form-control" name="height" maxlength="12" placeholder="" value=""
-                                requried>
+                                required>
                             <div class="invalid-feedback">
                                 city/town required.
                             </div>
@@ -337,7 +337,7 @@
                         <div class="mb-3 col-md-3">
                             <label for="weight">Weight<span class='text-muted'></span>:</label>
                             <input type="text" class="form-control" name="weight" maxlength="12" placeholder="" value=""
-                                requried>
+                                required>
                             <div class="invalid-feedback">
                                 city/town required.
                             </div>
@@ -345,7 +345,7 @@
                         <div class="mb-3 col-md-3">
                             <label for="eyeVision">Eye Vision<span class='text-muted'></span>:</label>
                             <input type="text" class="form-control" name="eyeVision" maxlength="12" placeholder="" value=""
-                                requried>
+                                required>
                             <div class="invalid-feedback">
                                 city/town required.
                             </div>
@@ -353,7 +353,7 @@
                         <div class="mb-3 col-md-3">
                             <label for="colorBlindness">Color Blindness<span class='text-muted'></span>:</label>
                             <input type="text" class="form-control" name="colorBlindness" maxlength="12" placeholder=""
-                                value="" requried>
+                                value="" required>
                             <div class="invalid-feedback">
                                 city/town required.
                             </div>
@@ -363,7 +363,7 @@
                         <div class="mb-6 col-md-6">
                             <label for="identificationMark">Identification Mark<span class='text-muted'></span>:</label>
                             <input type="text" class="form-control" name="identificationMark" maxlength="12" placeholder=""
-                                value="" requried>
+                                value="" required>
                             <div class="invalid-feedback">
                                 city/town required.
                             </div>
@@ -371,7 +371,7 @@
                         <div class="mb-6 col-md-6">
                             <label for="languageKnown">Language Known<span class='text-muted'></span>:</label>
                             <input type="text" class="form-control" name="languageKnown" maxlength="12" placeholder=""
-                                value="" requried>
+                                value="" required>
                             <div class="invalid-feedback">
                                 city/town required.
                             </div>
@@ -383,7 +383,7 @@
                     <div class="row">
                         <div class="mb-6 col-md-6">
                             <label for="photoImg">Photo:</label>
-                            <input type="file" class="form-control" name="photoImg" id="photoImg" placeholder="" requried>
+                            <input type="file" class="form-control" name="photoImg" id="photoImg" placeholder="" required>
                             <div class="invalid-feedback">
                                 city/town required.
                             </div>
