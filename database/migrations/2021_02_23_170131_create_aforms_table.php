@@ -17,11 +17,10 @@ class CreateAformsTable extends Migration
             $table->id();
 
             $table->string('rollNo');
-            $table->timestamp('registrationDate');
             $table->string('course');
             $table->string('name');
             $table->string('dOb');
-            $table->boolean('isMedicalFit');
+            $table->string('isMedicalFit');
             $table->string('fatherName');
             $table->string('fatherOccupation');
             $table->string('motherName');
@@ -30,9 +29,9 @@ class CreateAformsTable extends Migration
             $table->string('email');
             $table->string('houseNo');
             $table->string('landmark');
-            $table->string('city');
+            $table->string('city')->nullable();
             $table->string('tehsil');
-            $table->string('postoffice');
+            $table->string('postoffice')->nullable();
             $table->string('distt');
             $table->string('state');
             $table->string('pincode');
@@ -60,8 +59,8 @@ class CreateAformsTable extends Migration
             $table->string('colorBlindness');
             $table->text('identificationMark');
             $table->text('languageKnown');
-            $table->text('photoImg');
-            $table->text('signImg');
+            $table->text('photoImg')->nullable();
+            $table->text('signImg')->nullable();
 
 
 

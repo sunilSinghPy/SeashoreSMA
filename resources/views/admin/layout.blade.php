@@ -46,7 +46,7 @@
     </ul>
 
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
+    <form class="ml-3 form-inline">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
@@ -58,11 +58,11 @@
     </form>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
+    <ul class="ml-auto navbar-nav">
       <!-- Messages Dropdown Menu -->
         <li class="nav-item">
 
-            <a class="nav-link  text-bold" href="{{ route('logout') }}"
+            <a class="nav-link text-bold" href="{{ route('logout') }}"
               onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
                 <span class="badge badge-danger">
@@ -97,7 +97,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="pb-3 mt-3 mb-3 user-panel d-flex">
         <div class="image">
           <img src="{{asset('img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
@@ -179,6 +179,38 @@
 
             </ul>
           </li>
+          <li class="nav-item has-treeview menu-close">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                Admission
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{url('aform/create')}}" class="nav-link active">
+                  <i class="fa fa-user-friends nav-icon"></i>
+                  <p>Admission Form</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{url('aform/')}}" class="nav-link">
+                  <i class="fa fa-user-edit nav-icon"></i>
+                  <p>List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('aform/download')}}" class="nav-link">
+                  <i class="fas fa-file-pdf nav-icon"></i>
+                  <p>download pdf</p>
+                </a>
+              </li>
+
+
+            </ul>
+          </li>
 
 
 
@@ -196,8 +228,9 @@
         @yield('content')
 
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2020 <a href="http://www.sunilsingh.info">sunilSingh</a>.</strong>
+
+  <footer class="main-footer d-print-none">
+    <strong>Copyright &copy; 2014-2020 <a href="http://www.sunilsingh.info">seashoreMaritimeAcademy</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.0.5

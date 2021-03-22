@@ -1,9 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\App;
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers;
-use App\Http\Controllers\AformController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,9 +72,18 @@ Route::get('/admin/fdatasToCsv', [App\Http\Controllers\FdataController::class, '
 /**
  * Routes for Admission form multipart form data
  */
-Route::get('/student/admission1/',[AformController::class,'createStep1'])->name('admission-form');
-Route::post('/student/admission1/',[AformController::class,'postStep1']);
-Route::get('/student/admission2/',[AformController::class,'createStep2']);
-Route::post('/student/admission2/',[AformController::class,'postStep2']);
-Route::get('/student/admission2/',[AformController::class,'createStep3']);
-Route::post('/student/admission2/',[AformController::class,'postStep3']);
+Route::get('/aform',[App\http\Controllers\AformController::class,'index'])->middleware();
+Route::get('/aform/create',[App\Http\Controllers\AformController::class,'create'])
+    ->name('aform.create')
+    ->middleware('auth');
+Route::post('/aform',[App\Http\Controllers\AformController::class,'store'])
+    ->name('aform.store')
+    ->middleware('auth');
+Route::get('aform/download',[App\http\Controllers\AformController::class,'download'] )
+    ->name('aform.download')
+    ->middleware('auth');
+
+/**
+ * for pdf form print
+ */
+Route::get('aform/{aform}/pdfview',[App\http\controllers\AformController::class,'pdfview']);
